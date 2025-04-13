@@ -1,7 +1,8 @@
 import random
 
-health = 100
+P_health = 100
 D_health = 100
+dmg = 0
 choice = 0
 player = 0
 
@@ -19,34 +20,54 @@ while choice != 2:
     print("2) Heal")
     player = int(input("choice: "))
       
-
     if player == 1:
-      D_health = D_health - 30
-      print("------------}0{-------------")
-      print("Player used Slash")
+      D_health = D_health - 70
+      if D_health <= 0:
+        D_health = 0
+      print("WHAT THE SIGMA!!! CRITICAL HIT")
       print(f"Dragon's health: {D_health}")
 
     elif player == 2:
-      health = health + 10
+      P_health = P_health + 10
       print("----------------------------")
       print("player used 'Heal!'")
-      print(f"Player health:{health}")
+      print(f"Player health: {P_health}")
 
-    dragon = random.randint (1, 2)
+
+    dragon = random.randint (1, 3)
 
     if dragon == 1:
-      health = health - 50
+      P_health = P_health - 50
+      if P_health <= 0:
+        P_health = 0
       print("-------------0--------------")
       print("Dragon dealth CRITICAL HIT!!")
-      print(f"Player health: {health}")
+      print(f"Player health: {P_health}")
     elif dragon == 2:
-      health = health - 30
+      P_health = P_health - 30
+      if P_health <= 0:
+        P_health = 0
       print("-------------0--------------")
       print("Dragon scathed you.")
-      print(f"Player health: {health}")
+      print(f"Player health: {P_health}")
+    elif dragon == 3:
+      P_health = P_health - 0
+      if P_health <= 0:
+        P_health = 0
+      print("-------------0--------------")
+      print("Dragon missed!! crazy!!")
+      print(f"Player health: {P_health}")
     else:
-      print("erm, off script error.")
+      print("erm, off script error.")  
 
+    if P_health == 0:
+      print("----------")
+      print("You lost")
+      break
+    elif D_health == 0:
+      print("----------")
+      print("You won!")
+    
   elif choice == 2:
     print("Fleeing from the Dragon!!")
 
