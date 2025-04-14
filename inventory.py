@@ -1,5 +1,6 @@
-# fc's attempt
-# You're managing a tech warehouse that tracks gadget serial numbers 📱🔋🖥
+# Inventory - Min and Max functions [ fc-000's attempt ]
+# Intructions: You're managing a tech warehouse that tracks 
+# gadget serial numbers 📱🔋🖥
 
 # 🎯 Your task:
 # Store the serial numbers of the gadgets in a list
