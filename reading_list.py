@@ -1,5 +1,4 @@
-# Reading List 📚
-# Codédex
+# reading list exercise w/ fc000's attempt
 
 books = ['The Alchemist', 
          'The Little Prince', 
